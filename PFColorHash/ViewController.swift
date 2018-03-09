@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         inputTextField.addTarget(self, action: #selector(ViewController.textFieldDidChange(_:)), for: UIControlEvents.editingChanged)
     }
 
-    func textFieldDidChange(_ textField: UITextField) {
+    @objc func textFieldDidChange(_ textField: UITextField) {
         states.append(textField.text!)
         tableView.reloadData()
     }
